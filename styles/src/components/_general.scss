@@ -1,0 +1,31 @@
+hr {
+	margin: gutter('md') 0;
+	height: 2px;
+	background-color: color('white');
+	border: 0;
+}
+
+.color-palette {
+	@extend %sl-clearfix;
+
+	padding: 0;
+
+	> li {
+		list-style: none;
+		float: left;
+
+		@include responsive((
+			'mobl': (padding: gutter('xs')),
+			'tabl': (padding: gutter('xs' 'sm'))
+		));
+
+		> span {
+			opacity: 0;
+			transition: opacity 0.25s;
+		}
+
+		&:hover > span {
+			opacity: 1;
+		}
+	}
+}

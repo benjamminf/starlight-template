@@ -1,0 +1,96 @@
+.field {
+	@include p1(
+		$font-size: false,
+		$line-height: false
+	);
+
+	@include field(
+		$font-size: em(16px),
+		$border-width: 2px,
+		$padding: 14px,
+		$line-height: decimal(24px, 16px)
+	);
+
+	border-radius: 3px;
+	border-color: color('light');
+	background-color: transparent;
+	color: color('dark');
+	transition: border-color 0.25s, color 0.25s;
+
+	&::placeholder {
+		color: color('light');
+	}
+
+	&:focus {
+		border-color: color('mid');
+		outline: 0;
+	}
+
+	&:invalid {
+		border-color: color('primary');
+		color: color('primary');
+	}
+}
+
+.float-label {
+	@include p1(
+		$font-size: false,
+		$line-height: false
+	);
+
+	@include float-label(
+		$font-size: em(16px),
+		$border-width: 0 0 2px 0,
+		$padding: 26px 0 8px 0,
+		$line-height: decimal(24px, 16px),
+		$small-label-font-size: em(12px),
+		$label-shift: em(-14px, 12px)
+	);
+
+	> input,
+	> select,
+	> textarea {
+		border-color: color('light');
+		background-color: transparent;
+		color: color('dark');
+		transition: border-color 0.25s, color 0.25s;
+
+		&:focus {
+			outline: 0;
+		}
+	}
+
+	> label {
+		color: color('light');
+		transition: color 0.25s, transform 0.25s;
+	}
+
+	@include state('focused') {
+
+		> input,
+		> select,
+		> textarea {
+			border-color: color('mid');
+		}
+	}
+
+	@include state('filled' 'invalid') {
+
+		> input,
+		> select,
+		> textarea {
+			border-color: color('primary');
+		}
+
+		> label {
+			color: color('primary');
+		}
+	}
+
+	@include state('scrolled') {
+
+		> label {
+			color: transparent;
+		}
+	}
+}

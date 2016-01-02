@@ -1,0 +1,12 @@
+.article {
+
+	a {
+		color: color('secondary');
+		border-bottom: 2px solid color('secondary', 0.25);
+
+		&:hover {
+			color: color('primary');
+			border-bottom-color: color('primary', 0.25);
+		}
+	}
+}

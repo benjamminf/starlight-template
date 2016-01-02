@@ -1,0 +1,201 @@
+// Heading 1
+// ---------
+
+@mixin h1(
+	$font: font('primary'),
+	$font-weight: font-weight('primary', 'regular'),
+	$font-size: (
+		'mobl': em(30px),
+		'tabl': em(38px),
+		'desk': em(54px)
+	),
+	$line-height: (
+		'mobl': decimal(34px, 30px),
+		'tabl': decimal(40px, 38px),
+		'desk': decimal(50px, 54px)
+	),
+	$letter-spacing: (
+		'mobl': 0,
+		'tabl': em(-1px, 38px),
+		'desk': em(-1.75px, 54px)
+	),
+	$text-transform: none
+) {
+	@include properties((
+		font-family:     $font,
+		font-weight:     $font-weight,
+		font-size:       $font-size,
+		line-height:     $line-height,
+		letter-spacing:  $letter-spacing,
+		text-transform:  $text-transform
+	));
+}
+
+.h1 {
+	@include h1;
+}
+
+
+// Heading 2
+// ---------
+
+@mixin h2(
+	$font: font('primary'),
+	$font-weight: font-weight('primary', 'regular'),
+	$font-size: (
+		'mobl': em(30px),
+		'desk': em(38px)
+	),
+	$line-height: (
+		'mobl': decimal(34px, 30px),
+		'desk': decimal(40px, 38px)
+	),
+	$letter-spacing: (
+		'mobl': 0,
+		'desk': em(-1px, 38px)
+	),
+	$text-transform: none
+) {
+	@include properties((
+		font-family:     $font,
+		font-weight:     $font-weight,
+		font-size:       $font-size,
+		line-height:     $line-height,
+		letter-spacing:  $letter-spacing,
+		text-transform:  $text-transform
+	));
+}
+
+.h2 {
+	@include h2;
+}
+
+
+// Heading 3
+// ---------
+
+@mixin h3(
+	$font: font('secondary'),
+	$font-weight: font-weight('secondary', 'bold'),
+	$font-size: em(26px),
+	$line-height: decimal(30px, 26px),
+	$letter-spacing: em(-1px, 26px),
+	$text-transform: none
+) {
+	@include properties((
+		font-family:     $font,
+		font-weight:     $font-weight,
+		font-size:       $font-size,
+		line-height:     $line-height,
+		letter-spacing:  $letter-spacing,
+		text-transform:  $text-transform
+	));
+}
+
+.h3 {
+	@include h3;
+}
+
+
+// Heading 4
+// ---------
+
+@mixin h4(
+	$font: font('secondary'),
+	$font-weight: font-weight('secondary', 'bold'),
+	$font-size: em(20px),
+	$line-height: decimal(24px, 20px),
+	$letter-spacing: em(-0.4px, 20px),
+	$text-transform: none
+) {
+	@include properties((
+		font-family:     $font,
+		font-weight:     $font-weight,
+		font-size:       $font-size,
+		line-height:     $line-height,
+		letter-spacing:  $letter-spacing,
+		text-transform:  $text-transform
+	));
+}
+
+.h4 {
+	@include h4;
+}
+
+
+// Heading 5
+// ---------
+
+@mixin h5(
+	$font: font('secondary'),
+	$font-weight: font-weight('secondary', 'bolder'),
+	$font-size: em(14px),
+	$line-height: decimal(18px, 14px),
+	$letter-spacing: em(3px, 14px),
+	$text-transform: uppercase
+) {
+	@include properties((
+		font-family:     $font,
+		font-weight:     $font-weight,
+		font-size:       $font-size,
+		line-height:     $line-height,
+		letter-spacing:  $letter-spacing,
+		text-transform:  $text-transform
+	));
+}
+
+.h5 {
+	@include h5;
+}
+
+
+// Heading 6
+// ---------
+
+@mixin h6(
+	$font: font('secondary'),
+	$font-weight: font-weight('secondary', 'bold'),
+	$font-size: em(16px),
+	$line-height: decimal(24px, 16px),
+	$letter-spacing: 0,
+	$text-transform: none
+) {
+	@include properties((
+		font-family:     $font,
+		font-weight:     $font-weight,
+		font-size:       $font-size,
+		line-height:     $line-height,
+		letter-spacing:  $letter-spacing,
+		text-transform:  $text-transform
+	));
+}
+
+.h6 {
+	@include h6;
+}
+
+
+// Paragraph 1
+// -----------
+
+@mixin p1(
+	$font: font('secondary'),
+	$font-weight: font-weight('secondary', 'regular'),
+	$font-size: em(16px),
+	$line-height: decimal(24px, 16px),
+	$letter-spacing: 0,
+	$text-transform: none
+) {
+	@include properties((
+		font-family:     $font,
+		font-weight:     $font-weight,
+		font-size:       $font-size,
+		line-height:     $line-height,
+		letter-spacing:  $letter-spacing,
+		text-transform:  $text-transform
+	));
+}
+
+.p1 {
+	@include p1;
+}

@@ -1,0 +1,65 @@
+.button {
+	@include h5(
+		$font-size: false,
+		$line-height: false
+	);
+
+	@include button(
+		$font-size: em(14px),
+		$padding: gutter(16px 'sm')
+	);
+
+	border-radius: 3px;
+	background-color: transparent;
+	color: color('dark');
+	transition:
+		background-color 0.25s,
+		color 0.25s,
+		box-shadow 0.25s;
+
+	&:hover {
+		color: color('primary');
+		box-shadow: 0 2px 5px color('black', 0.25);
+	}
+
+	&:active {
+		color: color('dark');
+		box-shadow: 0 1px 3px color('black', 0.25);
+	}
+
+	@include parameter('primary') {
+		background-color: color('primary');
+		color: color('lighter');
+		box-shadow: 0 2px 5px color('black', 0.25);
+
+		&:hover {
+			background-color: color('primary-light');
+			color: color('white');
+			box-shadow: 0 3px 8px color('black', 0.4);
+		}
+
+		&:active {
+			background-color: color('primary-dark');
+			color: color('lighter');
+			box-shadow: 0 1px 3px color('black', 0.25);
+		}
+	}
+
+	@include parameter('secondary') {
+		background-color: color('secondary');
+		color: color('lighter');
+		box-shadow: 0 2px 5px color('black', 0.25);
+
+		&:hover {
+			background-color: color('secondary-light');
+			color: color('white');
+			box-shadow: 0 3px 8px color('black', 0.4);
+		}
+
+		&:active {
+			background-color: color('secondary-dark');
+			color: color('lighter');
+			box-shadow: 0 1px 3px color('black', 0.25);
+		}
+	}
+}

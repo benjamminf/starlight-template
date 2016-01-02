@@ -1,0 +1,22 @@
+@mixin section(
+	$h-padding: (
+		'mobl': gutter('sm'),
+		'tabl': gutter('md')
+	),
+	$v-padding: (
+		'mobl': gutter('md'),
+		'tabl': gutter('lg'),
+		'desk': gutter('xl')
+	)
+) {
+	@include properties((
+		padding-top:    $v-padding,
+		padding-right:  $h-padding,
+		padding-bottom: $v-padding,
+		padding-left:   $h-padding,
+	));
+}
+
+.section {
+	@include section;
+}

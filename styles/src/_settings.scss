@@ -1,0 +1,57 @@
+$sl-font-size: 16px;
+
+$sl-max-width: 1280px;
+
+$sl-sizes: (
+	'sm': 0.5em,
+	'md':   1em,
+	'lg':   2em
+);
+
+$sl-gutters: (
+	'xs': 12px,
+	'sm': 24px,
+	'md': 48px,
+	'lg': 72px,
+	'xl': 96px
+);
+
+$sl-breakpoints: (
+	'mobl':    0px,
+	'tabl':  640px,
+	'desk': 1080px
+);
+
+$sl-colors: (
+	'black':           #000000,
+	'darker':          #181d32,
+	'dark':            #413650,
+	'mid':             #807a87,
+	'light': #cac5a6,
+	'lighter':         #fdf9e5,
+	'white':           #ffffff,
+
+	'primary-dark':    #bc2b46,
+	'primary':         #e44664,
+	'primary-light': #f05172,
+
+	'secondary-dark':  #2a4fae,
+	'secondary':       #3c66cf,
+	'secondary-light': #436fdf
+);
+
+$sl-fonts: (
+	'primary':   'museo-sans-rounded' sans-serif,
+	'secondary': 'proxima-nova' sans-serif
+);
+
+$sl-font-weights: (
+	'primary': (
+		'regular': 700
+	),
+	'secondary': (
+		'regular': 400,
+		'bold':    700,
+		'bolder':  800
+	)
+);

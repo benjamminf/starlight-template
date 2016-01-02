@@ -1,0 +1,17 @@
+html {
+	background-color: color('lighter');
+	color: color('dark');
+}
+
+body {
+	@include p1;
+}
+
+:focus {
+	outline: 2px solid color('secondary', 0.5);
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
